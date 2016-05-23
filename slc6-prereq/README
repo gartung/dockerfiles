@@ -1,0 +1,4 @@
+To run in console mode:
+docker run --rm -i -t --user cms_admin -v /home/cms_admin:/home/cms_admin -v /tmp:/tmp --entrypoint /bin/bash gartung/slc6-prereq
+To run in ssh mode:
+docker run --rm -d -P  -v /home/cms_admin:/home/cms_admin -v /tmp:/tmp gartung/slc6-prereq
