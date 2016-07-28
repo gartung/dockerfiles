@@ -8,8 +8,8 @@ docker run --privileged -d -P  -v /tmp:/tmp slc6-prereq-cvmfs
 (this should give container number)
 docker port <container number or name>
 (gives the container port for ssh)
-ssh -p<container port> cms_admin@172.17.0.1 
-(or whatever the docker private network head IP address is)
+ssh -p<container port> cms_admin@0.0.0.0
+or ssh -p<container port> cma_admin@172.17.0.1 (the docker private network head IP address)
 setup CMSSW out of /cvmfs/cms.cern.ch
 (password is cms_admin)
 (su password is root_password)
