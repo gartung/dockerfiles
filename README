@@ -1,13 +1,15 @@
 To build:
 git clone https://github.com/gartung/dockerfiles.git
 cd dockerfiles/slc6-prereq-cvmfs
-docker build -t slc6-prereq-cvmfs
+docker build -t slc6-prereq-cvmfs .
 
 To run in ssh mode and connect via ssh:
 docker run --privileged -d -P  -v /tmp:/tmp slc6-prereq-cvmfs
-
+(this should give container number)
 docker port <container number or name>
-ssh -p<container port> cms_admin@172.17.0.1 (or whatever the docker private network head IP address is)
-
-password is cms_admin
-su password is root_password
+(gives the container port for ssh)
+ssh -p<container port> cms_admin@172.17.0.1 
+(or whatever the docker private network head IP address is)
+setup CMSSW out of /cvmfs/cms.cern.ch
+(password is cms_admin)
+(su password is root_password)
