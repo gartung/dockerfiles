@@ -18,7 +18,6 @@ RUN echo 'cms_admin:cms_admin' | chpasswd
 RUN echo 'root:root_password' | chpasswd
 RUN yum -y install gcc-gfortran
 RUN yum -y install nano 
-RUN yum -y install xauth
 
 ADD cvmfs/cernvm.repo /etc/yum.repos.d/cernvm.repo
 RUN yum install openssh-server nano cvmfs man freetype openssl098e libXpm libXext wget git  tcsh zsh tcl  perl-ExtUtils-Embed perl-libwww-perl  compat-libstdc++-33  libXmu  libXpm  zip e2fsprogs krb5-devel krb5-workstation  strace libXft -y
@@ -29,6 +28,8 @@ RUN mkdir /cvmfs/cms.cern.ch ; #mkdir /cvmfs/cms-condb.cern.ch
 RUN echo "cms.cern.ch /cvmfs/cms.cern.ch cvmfs defaults 0 0" >> /etc/fstab
 Run mkdir /cvmfs/cms-ib.cern.ch ;
 RUN echo "cms-ib.cern.ch /cvmfs/cms-ib.cern.ch cvmfs defaults 0 0" >> /etc/fstab
+RUN yum -y install xauth
+RUN yum -y install glx-utils
 
 EXPOSE 22
 CMD ["/root/run.sh"]
