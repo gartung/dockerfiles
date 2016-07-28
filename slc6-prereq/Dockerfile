@@ -27,6 +27,8 @@ ADD cvmfs/default.local /etc/cvmfs/default.local
 ADD cvmfs/run.sh /root/run.sh
 RUN mkdir /cvmfs/cms.cern.ch ; #mkdir /cvmfs/cms-condb.cern.ch
 RUN echo "cms.cern.ch /cvmfs/cms.cern.ch cvmfs defaults 0 0" >> /etc/fstab
+Run mkdir /cvmfs/cms-ib.cern.ch ;
+RUN echo "cms-ib.cern.ch /cvmfs/cms-ib.cern.ch cvmfs defaults 0 0" >> /etc/fstab
 
 EXPOSE 22
 CMD ["/root/run.sh"]
