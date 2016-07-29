@@ -13,3 +13,8 @@ ssh -p<container port> cms_admin@172.17.0.1
 setup CMSSW out of /cvmfs/cms.cern.ch
 (password is cms_admin)
 (su password is root_password)
+
+If you use Xquartz 2.7.9 on OSX and you want to use cmsShow with OpenGL support 
+you will need to copy startx to 
+/usr/X11/bin/startx
+This adds  the option -iglx to the Xserver start command..
