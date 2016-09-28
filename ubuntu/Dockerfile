@@ -15,8 +15,10 @@ RUN apt-get install -y \
  python2.7 \
  python \
  curl \
- g++ \
- libc6-dev-i386 \
+ g++-4.9 \
+ libc6-dev \
+ libc-dev \
+ libc-dev-i386 \
  zlib1g-dev \
  texinfo \
  libncurses5-dev \
@@ -43,7 +45,11 @@ RUN apt-get install -y \
  libxpm-dev \
  libxft-dev \
  libxext-dev \
- subversion
+ subversion \
+ libfontconfig1-dev \
+ libfreetype6-dev \
+ lib32z1
+  
 RUN apt-get clean all
 
 CMD ["/bin/bash"]
