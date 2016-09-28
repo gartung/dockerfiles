@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:devel
 
 MAINTAINER  Patrick Gartung "gartung@fnal.gov"
 
