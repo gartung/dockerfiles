@@ -18,7 +18,7 @@ RUN apt-get install -y \
  g++-4.9 \
  libc6-dev \
  libc-dev \
- libc-dev-i386 \
+ libc6-i386 \
  zlib1g-dev \
  texinfo \
  libncurses5-dev \
