@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:Trusty
 
 MAINTAINER  Patrick Gartung "gartung@fnal.gov"
 
