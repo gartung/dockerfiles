@@ -35,8 +35,8 @@ RUN apt-get install -y liblzma-dev
 RUN apt-get install -y libreadline-dev
 RUN apt-get install -y libgl1-mesa-dev
 RUN apt-get install -y libglu1-mesa-dev
-RUN apt-get install -y libX11-dev
-RUN apt-get install -y libXmu-dev
+RUN apt-get install -y libx11-dev
+RUN apt-get install -y libxmu-dev
 RUN apt-get install -y libxpm-dev
 RUN apt-get install -y libxft-dev
 RUN apt-get install -y libxext-dev
